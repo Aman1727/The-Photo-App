@@ -13,6 +13,7 @@
 		070BFA1E274D4C7100022692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070BFA1D274D4C7100022692 /* Assets.xcassets */; };
 		070BFA21274D4C7100022692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070BFA1F274D4C7100022692 /* LaunchScreen.storyboard */; };
 		070BFA29274D4CA200022692 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 070BFA28274D4CA200022692 /* GoogleService-Info.plist */; };
+		07AC10AE274E9881007D53FF /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AC10AD274E9881007D53FF /* LocalStorage.swift */; };
 		07CBDA22274E1332007734E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDA21274E1332007734E9 /* LogInViewController.swift */; };
 		07CBDA24274E145F007734E9 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDA23274E145F007734E9 /* CreateProfileViewController.swift */; };
 		07CBDA26274E1F0A007734E9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDA25274E1F0A007734E9 /* FeedViewController.swift */; };
@@ -33,6 +34,7 @@
 		070BFA20274D4C7100022692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		070BFA22274D4C7100022692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070BFA28274D4CA200022692 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07AC10AD274E9881007D53FF /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		07CBDA21274E1332007734E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		07CBDA23274E145F007734E9 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		07CBDA25274E1F0A007734E9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				07CBDA2D274E4184007734E9 /* UserService.swift */,
+				07AC10AD274E9881007D53FF /* LocalStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AC10AE274E9881007D53FF /* LocalStorage.swift in Sources */,
 				07CBDA24274E145F007734E9 /* CreateProfileViewController.swift in Sources */,
 				07CBDA22274E1332007734E9 /* LogInViewController.swift in Sources */,
 				07CBDA2E274E4184007734E9 /* UserService.swift in Sources */,

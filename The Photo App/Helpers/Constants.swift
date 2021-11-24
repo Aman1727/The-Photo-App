@@ -10,8 +10,16 @@ import Foundation
 struct Constants {
     
     struct Storyboard {
+        
+        static let loginNavController = "loginNavController"
+        
         static let tabBarController = "maintabBarController"
         static let profileSegue = "goToCreateProfile"
+    }
+    
+    struct LocalStorage {
+        static let userIdKey = "storedUserId"
+        static let usernameKey = "storedUsername"
     }
     
 }

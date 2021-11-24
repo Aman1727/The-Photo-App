@@ -55,13 +55,16 @@ extension LogInViewController: FUIAuthDelegate {
 //            Check on the database side if user has a profile
             UserService.retrieveProfile(userId: user.uid){ user in
                 
-//                Check if user is nil
+//               Check if user is nil
                 if user == nil {
                     //            If not, go to create profile view controller
                     self.performSegue(withIdentifier: Constants.Storyboard.profileSegue, sender: self)
                     
                 }else{
                     //            If so, go to tab bar controller
+                    
+//                    Save user to local Storage
+                    LocalStorageService.saveUser(userId: user!.userId, username: user!.username)
                     
 //                    Create an instance of the tab bar controller
                     let tabBarVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController)

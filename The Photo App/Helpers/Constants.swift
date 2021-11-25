@@ -12,7 +12,7 @@ struct Constants {
     struct Storyboard {
         
         static let loginNavController = "loginNavController"
-        
+        static let photoCellId = "Photo Cell"
         static let tabBarController = "maintabBarController"
         static let profileSegue = "goToCreateProfile"
     }

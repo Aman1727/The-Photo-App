@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1804.3478260869567" y="95.758928571428569"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="eid-L3-Utj">
             <objects>
-                <tabBarController storyboardIdentifier="maintabBarController" id="qzP-sq-mNn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="maintabBarController" id="qzP-sq-mNn" customClass="MainTabBarController" customModule="The_Photo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yrr-92-Of6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -125,6 +125,55 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4xQ-fA-MgO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Photo Cell" rowHeight="300" id="LPj-fb-kq6" customClass="PhotoCell" customModule="The_Photo_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LPj-fb-kq6" id="3Tp-PF-e7q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAD-1p-Yfj">
+                                                    <rect key="frame" x="40" y="31" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-J6-otA">
+                                                    <rect key="frame" x="40" y="248" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIo-QF-IRx">
+                                                    <rect key="frame" x="40" y="62" width="334" height="176"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="176" id="zT2-8y-fEP"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CVi-J6-otA" secondAttribute="bottom" constant="20" id="80R-9L-Dda"/>
+                                                <constraint firstItem="DAD-1p-Yfj" firstAttribute="top" secondItem="3Tp-PF-e7q" secondAttribute="topMargin" constant="20" id="Fqj-kw-nBb"/>
+                                                <constraint firstItem="DAD-1p-Yfj" firstAttribute="leading" secondItem="3Tp-PF-e7q" secondAttribute="leadingMargin" constant="20" id="IVj-tv-pDP"/>
+                                                <constraint firstItem="CVi-J6-otA" firstAttribute="leading" secondItem="3Tp-PF-e7q" secondAttribute="leadingMargin" constant="20" id="LcR-BC-kFv"/>
+                                                <constraint firstItem="JIo-QF-IRx" firstAttribute="top" secondItem="DAD-1p-Yfj" secondAttribute="bottom" constant="10" id="fM8-H1-6Mi"/>
+                                                <constraint firstItem="JIo-QF-IRx" firstAttribute="leading" secondItem="3Tp-PF-e7q" secondAttribute="leadingMargin" constant="20" id="nZu-xD-sAb"/>
+                                                <constraint firstItem="CVi-J6-otA" firstAttribute="top" secondItem="JIo-QF-IRx" secondAttribute="bottom" constant="10" id="q2f-Wb-B4D"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JIo-QF-IRx" secondAttribute="trailing" constant="20" id="tcG-Fa-WEB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="CVi-J6-otA" id="6Gs-Fe-dbn"/>
+                                            <outlet property="photoImageView" destination="JIo-QF-IRx" id="H2C-mc-fRn"/>
+                                            <outlet property="usernameLabel" destination="DAD-1p-Yfj" id="AkI-cb-vFp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vmo-6g-pq5" id="Wrw-ML-YdF"/>
+                                    <outlet property="delegate" destination="Vmo-6g-pq5" id="flU-cb-Gk1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I31-Hz-Srl"/>
@@ -136,7 +185,7 @@
                             <constraint firstItem="4xQ-fA-MgO" firstAttribute="leading" secondItem="I31-Hz-Srl" secondAttribute="leading" id="iTm-YQ-3uM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="MHZ-vZ-dwg"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Feed" id="MHZ-vZ-dwg"/>
                     <connections>
                         <outlet property="tableView" destination="4xQ-fA-MgO" id="djh-9Y-WPb"/>
                     </connections>
@@ -169,7 +218,7 @@
                             <constraint firstItem="CHT-UL-iPC" firstAttribute="centerX" secondItem="3Aq-sS-0Rp" secondAttribute="centerX" id="pCd-eI-DBH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="o4r-35-H73"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Settings" id="o4r-35-H73"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crB-CD-yAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,10 +231,48 @@
                     <view key="view" contentMode="scaleToFill" id="l2T-NW-MFH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Nbw-DG-fNS">
+                                <rect key="frame" x="20" y="385.5" width="374" height="125.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Complete!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goJ-AB-GlU">
+                                        <rect key="frame" x="118.5" y="0.0" width="137.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" alpha="0.5" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HKt-lE-5Nq">
+                                        <rect key="frame" x="20" y="55.5" width="334" height="4"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHJ-Sq-0qm">
+                                        <rect key="frame" x="138.5" y="94.5" width="97.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Go To Feed"/>
+                                        <connections>
+                                            <action selector="doneButtonTapped:" destination="jMb-bE-YaF" eventType="touchUpInside" id="aK5-KR-fZi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HKt-lE-5Nq" firstAttribute="leading" secondItem="Nbw-DG-fNS" secondAttribute="leading" constant="20" id="CvH-Os-Rby"/>
+                                    <constraint firstAttribute="trailing" secondItem="HKt-lE-5Nq" secondAttribute="trailing" constant="20" id="Kc4-0d-Esr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ms-co-Ldd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nbw-DG-fNS" firstAttribute="centerY" secondItem="l2T-NW-MFH" secondAttribute="centerY" id="JOY-mF-kdy"/>
+                            <constraint firstItem="5Ms-co-Ldd" firstAttribute="trailing" secondItem="Nbw-DG-fNS" secondAttribute="trailing" constant="20" id="uQN-o9-wr1"/>
+                            <constraint firstItem="Nbw-DG-fNS" firstAttribute="leading" secondItem="5Ms-co-Ldd" secondAttribute="leading" constant="20" id="um0-tY-nwN"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add" id="NuM-1d-2Rq"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Add" id="NuM-1d-2Rq"/>
+                    <connections>
+                        <outlet property="doneButton" destination="MHJ-Sq-0qm" id="qhM-ou-Ybh"/>
+                        <outlet property="progressBar" destination="HKt-lE-5Nq" id="upa-CQ-l9V"/>
+                        <outlet property="progressLabel" destination="goJ-AB-GlU" id="vKx-Xi-hqO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QiP-9O-9Ic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

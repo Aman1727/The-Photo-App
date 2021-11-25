@@ -10,9 +10,11 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var signoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        signoutButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     

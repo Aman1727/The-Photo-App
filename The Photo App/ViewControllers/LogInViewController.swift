@@ -11,10 +11,13 @@ import FirebaseUI
 
 class LogInViewController: UIViewController{
 
+    @IBOutlet weak var loginButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loginButtonOutlet.layer.cornerRadius = 20
     }
     
     

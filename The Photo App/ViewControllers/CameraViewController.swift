@@ -17,7 +17,7 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        doneButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
@@ -50,6 +50,7 @@ class CameraViewController: UIViewController {
                 
     //            Check if it's done
                 if roundedPct == 100 {
+                    self.progressLabel.text = "Upload Completed !"
                     self.doneButton.alpha = 1
                 }
             }
